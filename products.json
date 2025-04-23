@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Wireless Bluetooth Earbuds",
+    "description": "High-quality wireless earbuds with noise cancellation",
+    "price": 89.99,
+    "isActive": true
+  },
+  {
+    "name": "Smartphone X Pro",
+    "description": "Latest flagship smartphone with 6.7\" OLED display",
+    "price": 999.99,
+    "isActive": true
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "description": "Comfortable chair with lumbar support for long work sessions",
+    "price": 249.95,
+    "isActive": true
+  },
+  {
+    "name": "4K Smart TV 55\"",
+    "description": "Ultra HD television with built-in streaming apps",
+    "price": 599.00,
+    "isActive": false
+  },
+  {
+    "name": "Fitness Tracker",
+    "description": "Waterproof activity tracker with heart rate monitor",
+    "price": 79.50,
+    "isActive": true
+  },
+  {
+    "name": "Electric Kettle",
+    "description": "Fast-boiling kettle with temperature control",
+    "price": 45.20,
+    "isActive": true
+  },
+  {
+    "name": "Wireless Charging Pad",
+    "description": "Qi-certified charging pad for smartphones",
+    "price": 29.99,
+    "isActive": false
+  },
+  {
+    "name": "Noise Cancelling Headphones",
+    "description": "Over-ear headphones with 30-hour battery life",
+    "price": 199.00,
+    "isActive": true
+  },
+  {
+    "name": "Smart Watch",
+    "description": "Fitness tracking and notifications on your wrist",
+    "price": 159.95,
+    "isActive": true
+  },
+  {
+    "name": "Portable Bluetooth Speaker",
+    "description": "Waterproof speaker with 20-hour playtime",
+    "price": 129.00,
+    "isActive": true
+  },
+  {
+    "name": "Coffee Maker",
+    "description": "Programmable 12-cup coffee maker",
+    "price": 69.99,
+    "isActive": true
+  },
+  {
+    "name": "External SSD 1TB",
+    "description": "High-speed portable solid state drive",
+    "price": 129.99,
+    "isActive": false
+  },
+  {
+    "name": "Air Fryer",
+    "description": "Digital air fryer with multiple cooking functions",
+    "price": 119.95,
+    "isActive": true
+  },
+  {
+    "name": "Electric Toothbrush",
+    "description": "Sonic toothbrush with 3 cleaning modes",
+    "price": 59.99,
+    "isActive": true
+  },
+  {
+    "name": "Gaming Keyboard",
+    "description": "Mechanical keyboard with RGB lighting",
+    "price": 89.50,
+    "isActive": true
+  }
+]
