@@ -1,5 +1,7 @@
 package com.ger.loadproducts.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ger.loadproducts.data.ProductRepository
@@ -18,14 +20,14 @@ class ProductsViewModel
 @Inject
 constructor(private val productRepository: ProductRepository) : ViewModel() {
 
-    private val _productState = MutableStateFlow(
+    private val _productState = MutableLiveData(
         ProductState(
             products = listOf(
-                Product("Toalla", "Toalla de algodon 80 x 120 cm", 299.9)
+                Product("Toalla", "Toalla de algodón 80 x 120 cm", 299.9)
             )
         )
     )
-    val productState = _productState.asStateFlow()
+    val productState: LiveData<ProductState> = _productState
 
     val exceptionHandler = CoroutineExceptionHandler { _, exception ->
         println("¡Error no capturado!: ${exception.message}")
@@ -35,13 +37,9 @@ constructor(private val productRepository: ProductRepository) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO + exceptionHandler) {
             try {
                 val nuevaLista = productRepository.getProducts()
-                _productState.update {
-                    it.copy(products = nuevaLista, isLoading = false)
-                }
+                _productState.postValue(_productState.value?.copy(products = nuevaLista, isLoading = false))
             } catch (e: Exception) {
-                _productState.update {
-                    it.copy(isLoading = false, error = e)
-                }
+                _productState.postValue(_productState.value?.copy(error = e, isLoading = false))
             }
         }
     }
